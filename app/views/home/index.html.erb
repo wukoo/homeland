@@ -1,7 +1,8 @@
 <% if !mobile? %>
-<div class="hide-ios">
-  <%= raw Setting.index_html %>
-</div>
+  <div class="hide-ios">
+    <%= raw Setting.index_html %>
+  </div>
+  <%= render "/shared/index_sections" %>
 <% end %>
 
 <div class="home_suggest_topics card">
@@ -26,6 +27,5 @@
 </div>
 
 <% if !mobile? %>
-  <%= render "/shared/index_sections" %>
   <%= render "/shared/hot_locations" %>
 <% end %>
